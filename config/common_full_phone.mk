@@ -12,4 +12,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/dictionaries
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
 
+# PixelPropsUtils
+PRODUCT_COPY_FILES += \
+    vendor/lineage/prebuilt/common/etc/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
+
 $(call inherit-product, vendor/lineage/config/telephony.mk)
